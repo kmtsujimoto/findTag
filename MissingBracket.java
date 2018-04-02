@@ -1,12 +1,12 @@
-/*
-Kyle Tsujimoto
-8-3-17
-MissingBracket.java
-
-
-
+/**
+* MissingBracket.java
+* For an HTML file, finds if a tag that needs to be closed is not closed and prints
+* out the line and type of tag of the opening tag missing the closing tag.
+* @author Kyle Tsujimoto
+* @since 8-3-17
+* @version 1.0
 */
-import java.util.ArrayList;		// used by expression evaluator
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -42,7 +42,10 @@ public class MissingBracket
 		findBrackets();
 		printBrackets();
 	}
-		
+	
+	/**
+	 * Opens the file
+	 */
 	public void getText()
 	{
 		File inFile = new File(inFileName);
@@ -57,6 +60,10 @@ public class MissingBracket
 		}
 	}
 
+	/**
+	 * Finds the tags excluding any additional characters. If the tag includes a backslash,
+	 * The corresponding opening tag is removed.
+	 */
 	public void findBrackets()
 	{
 		String current = "";
@@ -106,6 +113,9 @@ public class MissingBracket
 		input.close();
 	}
 
+	/**
+	 * Prints the opening tags without closing tags and their lines.
+	 */
 	public void printBrackets()
 	{
 		System.out.println("\n\n\n");
