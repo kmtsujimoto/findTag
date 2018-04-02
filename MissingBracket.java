@@ -17,13 +17,11 @@ public class MissingBracket
 	private String str, inFileName, outFileName;
 	private Scanner input;
 	private ArrayList<String> openBrackets;
-	private ArrayList<String> errors;
 	private ArrayList<Integer> lineNums;
 
 	public MissingBracket(String name)
 	{
 		openBrackets = new ArrayList<String>();
-		errors = new ArrayList<String>();
 		lineNums = new ArrayList<Integer>();
 		inFileName = name;
 		str = "";
